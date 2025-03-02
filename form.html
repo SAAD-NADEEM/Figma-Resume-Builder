@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder - Complete Form</title>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <link rel="stylesheet" href="src/styles/basicinfo.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="test auto-block">
+    <div class="form-wrapper">
+        <h1 class="heading-1 bold text-400">
+            Resume Builder <br />
+            <span class="heading-1 semi-bold text-100">Complete Form</span>
+        </h1>
+
+        <!-- Basic Info -->
+        <form id="resume-form" class="col spacing-medium">
+            <h2 class="heading-2 bold text-300">Basic Info</h2>
+            <div class="form-grid">
+                <div class="input-wrapper spacing-small">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="input-wrapper spacing-small">
+                    <label for="profession">Profession:</label>
+                    <input type="text" id="profession" name="profession" required />
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="input-wrapper spacing-small">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="input-wrapper spacing-small">
+                    <label for="website">Website:</label>
+                    <input type="url" id="website" name="website" />
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <div class="input-wrapper spacing-small">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
+
+                <div class="input-wrapper spacing-small">
+                    <label for="address">Address (Country & City):</label>
+                    <input type="text" id="address" name="address" placeholder="e.g., USA, New York" required />
+                </div>
+            </div>
+
+            <label for="socials">Select a Social Account:</label>
+            <select id="social-select" name="social-select">
+                <option value="">--Select a Social Media Platform--</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Youtube">Youtube</option>
+                <option value="Linkedin">Linkedin</option>
+                <option value="Github">Github</option>
+                <option value="Twitter">Twitter</option>
+                <option value="X">X</option>
+            </select>
+
+            <div id="social-container" class="social-container"></div>
+
+            <button type="button" id="add-social-btn">Add Social</button>
+
+            <!-- Experiences -->
+            <h2 class="heading-2 bold text-300">Experiences</h2>
+            <div id="experiences-container">
+                <div class="experience-entry form-grid">
+                    <div class="input-wrapper spacing-small">
+                        <label for="company-name">Company Name:</label>
+                        <input type="text" id="company-name" name="company-name" required />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="profession-name">Profession Name:</label>
+                        <input type="text" id="profession-name" name="profession-name" required />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="starting-year">Starting Year:</label>
+                        <input type="number" id="starting-year" name="starting-year" required />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="leaving-year">Leaving Year:</label>
+                        <input type="number" id="leaving-year" name="leaving-year" />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="city-country">City & Country:</label>
+                        <input type="text" id="city-country" name="city-country" placeholder="e.g., USA, New York" required />
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="add-experience-btn">Add Another Experience</button>
+
+            <!-- Education -->
+            <h2 class="heading-2 bold text-300">Education</h2>
+            <div id="education-container">
+                <div class="education-entry form-grid">
+                    <div class="input-wrapper spacing-small">
+                        <label for="institute-name">Institute Name:</label>
+                        <input type="text" id="institute-name" name="institute-name" required />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="qualification">Qualification:</label>
+                        <input type="text" id="qualification" name="qualification" required />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="year-of-end">Year of End:</label>
+                        <input type="number" id="year-of-end" name="year-of-end" required />
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="add-education-btn">Add Another Education</button>
+
+            <!-- Skills -->
+            <h2 class="heading-2 bold text-300">Skills</h2>
+            <div id="skills-container">
+                <div class="skill-entry form-grid">
+                    <div class="input-wrapper spacing-small">
+                        <label for="skill-name">Skill Name:</label>
+                        <input type="text" id="skill-name" name="skill-name" required />
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="add-skill-btn">Add Another Skill</button>
+
+            <!-- Projects -->
+            <h2 class="heading-2 bold text-300">Projects</h2>
+            <div id="projects-container">
+                <div class="project-entry form-grid">
+                    <div class="input-wrapper spacing-small">
+                        <label for="project-name">Project Name:</label>
+                        <input type="text" id="project-name" name="project-name" required />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="project-url">Project URL:</label>
+                        <input type="url" id="project-url" name="project-url" />
+                    </div>
+
+                    <div class="input-wrapper spacing-small">
+                        <label for="project-description">Project Description:</label>
+                        <textarea id="project-description" name="project-description" rows="2" placeholder="1-2 lines description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="add-project-btn">Add Another Project</button>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+
+        <script>
+            const form = document.getElementById("resume-form");
+            const socialSelect = document.getElementById("social-select");
+            const socialContainer = document.getElementById("social-container");
+            const addSocialBtn = document.getElementById("add-social-btn");
+            const experiencesContainer = document.getElementById("experiences-container");
+            const addExperienceBtn = document.getElementById("add-experience-btn");
+            const educationContainer = document.getElementById("education-container");
+            const addEducationBtn = document.getElementById("add-education-btn");
+            const skillsContainer = document.getElementById("skills-container");
+            const addSkillBtn = document.getElementById("add-skill-btn");
+            const projectsContainer = document.getElementById("projects-container");
+            const addProjectBtn = document.getElementById("add-project-btn");
+
+            let socialData = [];
+            let experiencesData = [];
+            let educationData = [];
+            let skillsData = [];
+            let projectsData = [];
+
+            // Function to display social media inputs dynamically
+            function displaySocialInputs(social) {
+                socialContainer.innerHTML = "";
+
+                if (social) {
+                    const socialDiv = document.createElement("div");
+                    socialDiv.classList.add("social-input");
+
+                    const urlLabel = document.createElement("label");
+                    urlLabel.textContent = `${social} URL:`;
+                    const urlInput = document.createElement("input");
+                    urlInput.type = "url";
+                    urlInput.name = `${social}-url`;
+                    urlInput.placeholder = `Enter ${social} URL`;
+
+                    const usernameLabel = document.createElement("label");
+                    usernameLabel.textContent = `${social} Username:`;
+                    const usernameInput = document.createElement("input");
+                    usernameInput.type = "text";
+                    usernameInput.name = `${social}-username`;
+                    usernameInput.placeholder = `Enter ${social} username`;
+
+                    socialDiv.appendChild(urlLabel);
+                    socialDiv.appendChild(urlInput);
+                    socialDiv.appendChild(usernameLabel);
+                    socialDiv.appendChild(usernameInput);
+
+                    socialContainer.appendChild(socialDiv);
+                }
+            }
+
+            // Event listener for social media selection
+            socialSelect.addEventListener("change", function () {
+                const selectedSocial = socialSelect.value;
+                displaySocialInputs(selectedSocial);
+            });
+
+            // Event listener for adding social media
+            addSocialBtn.addEventListener("click", function () {
+                const selectedSocial = socialSelect.value;
+                if (selectedSocial) {
+                    const urlInput = document.querySelector(
+                        `[name="${selectedSocial}-url"]`
+                    );
+                    const usernameInput = document.querySelector(
+                        `[name="${selectedSocial}-username"]`
+                    );
+
+                    if (urlInput && usernameInput) {
+                        const socialInfo = {
+                            platform: selectedSocial,
+                            url: urlInput.value,
+                            username: usernameInput.value,
+                        };
+
+                        socialData.push(socialInfo);
+
+                        urlInput.value = "";
+                        usernameInput.value = "";
+
+                        alert(`${selectedSocial} added!`);
+                    }
+                }
+            });
+
+            // Function to add a new experience entry
+            function addExperienceEntry() {
+                const experienceDiv = document.createElement("div");
+                experienceDiv.classList.add("experience-entry", "form-grid");
+
+                experienceDiv.innerHTML = `
+                    <div class="input-wrapper spacing-small">
+                        <label for="company-name">Company Name:</label>
+                        <input type="text" name="company-name" required />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="profession-name">Profession Name:</label>
+                        <input type="text" name="profession-name" required />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="starting-year">Starting Year:</label>
+                        <input type="number" name="starting-year" required />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="leaving-year">Leaving Year:</label>
+                        <input type="number" name="leaving-year" />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="city-country">City & Country:</label>
+                        <input type="text" name="city-country" placeholder="e.g., USA, New York" required />
+                    </div>
+                `;
+
+                experiencesContainer.appendChild(experienceDiv);
+            }
+
+            // Event listener for adding a new experience entry
+            addExperienceBtn.addEventListener("click", addExperienceEntry);
+
+            // Function to add a new education entry
+            function addEducationEntry() {
+                const educationDiv = document.createElement("div");
+                educationDiv.classList.add("education-entry", "form-grid");
+
+                educationDiv.innerHTML = `
+                    <div class="input-wrapper spacing-small">
+                        <label for="institute-name">Institute Name:</label>
+                        <input type="text" name="institute-name" required />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="qualification">Qualification:</label>
+                        <input type="text" name="qualification" required />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="year-of-end">Year of End:</label>
+                        <input type="number" name="year-of-end" required />
+                    </div>
+                `;
+
+                educationContainer.appendChild(educationDiv);
+            }
+
+            // Event listener for adding a new education entry
+            addEducationBtn.addEventListener("click", addEducationEntry);
+
+            // Function to add a new skill entry
+            function addSkillEntry() {
+                const skillDiv = document.createElement("div");
+                skillDiv.classList.add("skill-entry", "form-grid");
+
+                skillDiv.innerHTML = `
+                    <div class="input-wrapper spacing-small">
+                        <label for="skill-name">Skill Name:</label>
+                        <input type="text" name="skill-name" required />
+                    </div>
+                `;
+
+                skillsContainer.appendChild(skillDiv);
+            }
+
+            // Event listener for adding a new skill entry
+            addSkillBtn.addEventListener("click", addSkillEntry);
+
+            // Function to add a new project entry
+            function addProjectEntry() {
+                const projectDiv = document.createElement("div");
+                projectDiv.classList.add("project-entry", "form-grid");
+
+                projectDiv.innerHTML = `
+                    <div class="input-wrapper spacing-small">
+                        <label for="project-name">Project Name:</label>
+                        <input type="text" name="project-name" required />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="project-url">Project URL:</label>
+                        <input type="url" name="project-url" />
+                    </div>
+                    <div class="input-wrapper spacing-small">
+                        <label for="project-description">Project Description:</label>
+                        <textarea name="project-description" rows="2" placeholder="1-2 lines description"></textarea>
+                    </div>
+                `;
+
+                projectsContainer.appendChild(projectDiv);
+            }
+
+            // Event listener for adding a new project entry
+            addProjectBtn.addEventListener("click", addProjectEntry);
+
+            // Event listener for form submission
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const basicInfoData = {
+                    name: document.getElementById("name").value,
+                    profession: document.getElementById("profession").value,
+                    email: document.getElementById("email").value,
+                    website: document.getElementById("website").value,
+                    phone: document.getElementById("phone").value,
+                    address: document.getElementById("address").value,
+                    socials: socialData,
+                };
+
+                const experiences = [];
+                const experienceEntries = document.querySelectorAll(".experience-entry");
+                experienceEntries.forEach((entry) => {
+                    const experience = {
+                        companyName: entry.querySelector("[name='company-name']").value,
+                        professionName: entry.querySelector("[name='profession-name']").value,
+                        startingYear: entry.querySelector("[name='starting-year']").value,
+                        leavingYear: entry.querySelector("[name='leaving-year']").value,
+                        cityCountry: entry.querySelector("[name='city-country']").value,
+                    };
+                    experiences.push(experience);
+                });
+
+                const education = [];
+                const educationEntries = document.querySelectorAll(".education-entry");
+                educationEntries.forEach((entry) => {
+                    const edu = {
+                        instituteName: entry.querySelector("[name='institute-name']").value,
+                        qualification: entry.querySelector("[name='qualification']").value,
+                        yearOfEnd: entry.querySelector("[name='year-of-end']").value,
+                    };
+                    education.push(edu);
+                });
+
+                const skills = [];
+                const skillEntries = document.querySelectorAll(".skill-entry");
+                skillEntries.forEach((entry) => {
+                    const skill = {
+                        skillName: entry.querySelector("[name='skill-name']").value,
+                    };
+                    skills.push(skill);
+                });
+
+                const projects = [];
+                const projectEntries = document.querySelectorAll(".project-entry");
+                projectEntries.forEach((entry) => {
+                    const project = {
+                        projectName: entry.querySelector("[name='project-name']").value,
+                        projectUrl: entry.querySelector("[name='project-url']").value,
+                        projectDescription: entry.querySelector("[name='project-description']").value,
+                    };
+                    projects.push(project);
+                });
+
+                const resumeData = {
+                    basicInfo: basicInfoData,
+                    experiences: experiences,
+                    education: education,
+                    skills: skills,
+                    projects: projects,
+                };
+
+                // Save data to localStorage with key 'resumeData'
+                localStorage.setItem("resumeData", JSON.stringify(resumeData));
+
+                alert("Resume data saved successfully!");
+                // Optionally, redirect to another page or display the data
+            });
+        </script>
+    </div>
+</body>
+
+</html>
