@@ -275,6 +275,7 @@ header {
   min-width: 160px;
 }
 
+
 .adress-item .icon {
   height: 28px;
   width: 28px;
@@ -621,6 +622,10 @@ main {
   }
   @page {
     size: A3;
+    margin: 0;
+  }
+  body {
+    padding: 2rem;
   }
   * {
     -webkit-print-color-adjust: exact; /* Chrome, Safari */

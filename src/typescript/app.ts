@@ -41,24 +41,24 @@ const predefinedResumeData: ResumeData = {
         name: "TAIMOOR NADEEM",
         profession: "Full-stack web developer",
         email: "saadngaming@gmail.com",
-        website: "xyz.com",
+        website: "https://figma-resume-builder.vercel.app/",
         phone: "03232823873",
         address: "Karachi, Pakistan",
         socials: [
             {
                 platform: "Instagram",
-                url: "https://instagram.com/dummy-taimoor",
-                username: "dummy-taimoor",
+                url: "https://instagram.com/react_and_roll_saad",
+                username: "react_and_roll_saad",
             },
             {
                 platform: "Github",
-                url: "https://github.com/dummy-taimoor",
-                username: "dummy-taimoor",
+                url: "https://github.com/SAAD-NADEEM",
+                username: "SAAD-NADEEM",
             },
             {
                 platform: "Linkedin",
-                url: "https://linkedin.com/in/dummy-taimoor",
-                username: "dummy-taimoor",
+                url: "https://linkedin.com/in/sa4d7k/",
+                username: "sa4d7k",
             },
         ],
     },
@@ -81,7 +81,7 @@ const predefinedResumeData: ResumeData = {
         },
         {
             instituteName: "GIAIC",
-            qualification: "Generative AI, WEB3 & Metaverse",
+            qualification: "Agentic AI, WEB3 & Metaverse",
             yearOfEnd: "2025",
         },
     ],
@@ -95,23 +95,30 @@ const predefinedResumeData: ResumeData = {
         { skillName: "Python" },
         { skillName: "React Native" },
         { skillName: "GeminiAI" },
+        { skillName: "Streamlit" },
     ],
     projects: [
         {
             projectName: "AI RecipeGen",
-            projectUrl: "https://dummy-ai-recipegen.com",
-            projectDescription: "An AI-powered recipe generator app.",
+            projectUrl: "https://recipegen-ai.netlify.app/",
+            projectDescription: "An AI-powered recipe generator app made using ReactJs and GeminiAI.",
         },
         {
             projectName: "AI Nutritional App",
-            projectUrl: "https://dummy-nutritional-app.com",
-            projectDescription: "An app to analyze nutritional content using AI.",
+            projectUrl: "https://nutritional-powerhouse.netlify.app/",
+            projectDescription: "An app to analyze nutritional content made using ReactJs and GeminiAI.",
         },
         {
             projectName: "Python RecipeGen",
-            projectUrl: "https://dummy-python-recipegen.com",
+            projectUrl: "https://recipegenv1.streamlit.app/",
             projectDescription: "A Python-based recipe generator.",
         },
+        {
+            projectName: "Morent - Rent A Car",
+            projectUrl: "https://morent-renta-car.vercel.app/",
+            projectDescription: "Just Dummy Rent a car service app using NextJS and SanityIO",
+        },
+
     ],
 };
 
