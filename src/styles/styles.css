@@ -275,7 +275,6 @@ header {
   min-width: 160px;
 }
 
-
 .adress-item .icon {
   height: 28px;
   width: 28px;
@@ -519,13 +518,6 @@ main {
   .profile p {
     font-size: 1.2rem;
   }
-  .adress {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    padding-block: 1rem;
-    justify-content: center;
-    gap: 1rem;
-  }
   .adress-item .icon {
     height: 24px;
     width: 24px;
@@ -537,11 +529,6 @@ main {
   .adress-item .text p {
     font-size: 10px;
     line-height: 10px;
-  }
-  .socials {
-    justify-content: center;
-    padding-block: 1rem;
-    gap: 1rem;
   }
   .social-item a {
     gap: 12px;
@@ -631,5 +618,62 @@ main {
     -webkit-print-color-adjust: exact; /* Chrome, Safari */
     color-adjust: exact; /* Standard property */
     print-color-adjust: exact; /* Future standard */
+  }
+
+  header {
+    width: 340px;
+    padding: 1rem 3rem;
+  }
+  .profile .profile-pic {
+    height: 100px;
+    width: 100px;
+  }
+  .profile h1 {
+    margin-bottom: 5px;
+  }
+  .profile p {
+    font-size: 1.5rem;
+  }
+  .adress-item .icon {
+    height: 28px;
+    width: 28px;
+  }
+  .adress-item .text h1 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .adress-item .text p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  a .text h1 {
+    font-size: 12px;
+  }
+  a .text p {
+    font-size: 12px;
+  }
+  main {
+    padding: 3rem 1rem;
+  }
+  .line,
+  .bullet {
+    display: block;
+  }
+  .section-content {
+    padding: 1.5rem;
+  }
+  .card {
+    padding: 1.5rem 2rem;
+  }
+
+  .heading-2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .row-responsive {
+    flex-direction: row;
+  }
+  .col-responsive {
+    flex-direction: column;
   }
 }
