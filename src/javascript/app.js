@@ -106,7 +106,6 @@ function populateUI(resumeData) {
     const professionElement = document.querySelector(".profile p");
     const emailElement = document.querySelector(".adress-item:nth-child(1) p");
     const websiteElement = document.querySelector(".adress-item:nth-child(2) p");
-    const websiteElementUrl = document.querySelector(".adress-item:nth-child(2) a");
     const phoneElement = document.querySelector(".adress-item:nth-child(3) p");
     const addressElement = document.querySelector(".adress-item:nth-child(4) p");
     if (nameElement)
@@ -117,9 +116,6 @@ function populateUI(resumeData) {
         emailElement.textContent = resumeData.basicInfo.email;
     if (websiteElement)
         websiteElement.textContent = resumeData.basicInfo.website;
-    if (websiteElementUrl) {
-        websiteElement.href = resumeData.basicInfo.website;
-    }
     if (phoneElement)
         phoneElement.textContent = resumeData.basicInfo.phone;
     if (addressElement)
@@ -230,3 +226,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // Populate the UI with the resume data
     populateUI(resumeData);
 });
+const profileUpload = document.getElementById("profile-upload");
+const profileImage = document.getElementById("profileImage");
+// Load profile picture from localStorage
+const loadProfilePicture = () => {
+    const savedImage = localStorage.getItem("profilePicture");
+    if (savedImage) {
+        profileImage.src = savedImage;
+    }
+};
+// Handle profile picture change
+const handleProfileChange = (event) => {
+    const target = event.target;
+    if (!target.files || target.files.length === 0)
+        return;
+    const file = target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        if (e.target?.result) {
+            const imageUrl = e.target.result;
+            profileImage.src = imageUrl;
+            localStorage.setItem("profilePicture", imageUrl);
+        }
+    };
+    reader.readAsDataURL(file);
+};
+// Load saved profile picture when page loads
+window.addEventListener("DOMContentLoaded", loadProfilePicture);
+// Add event listener for file upload
+profileUpload.addEventListener("change", handleProfileChange);

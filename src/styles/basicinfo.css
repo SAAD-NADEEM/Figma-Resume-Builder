@@ -173,3 +173,100 @@ button:active {
 #submit-btn:active {
     opacity: 0.8;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Form Grid Layout */
+    .form-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    /* Reduce padding for smaller screens */
+    .form-wrapper {
+        padding: 1rem;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .input-wrapper label {
+        font-size: 0.8rem;
+    }
+
+    .input-wrapper input,
+    .input-wrapper textarea,
+    .input-wrapper select {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust button sizes for smaller screens */
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust social media section for smaller screens */
+    .social-input {
+        gap: 0.25rem;
+    }
+
+    .social-input label {
+        font-size: 0.8rem;
+    }
+
+    .social-input input {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust dynamic sections for smaller screens */
+    .experience-entry,
+    .education-entry,
+    .skill-entry,
+    .project-entry {
+        padding: 0.75rem;
+    }
+
+    /* Adjust textarea height for smaller screens */
+    textarea {
+        min-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .form-wrapper {
+        padding: 0.5rem;
+    }
+
+    .input-wrapper label {
+        font-size: 0.75rem;
+    }
+
+    .input-wrapper input,
+    .input-wrapper textarea,
+    .input-wrapper select {
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .social-input label {
+        font-size: 0.75rem;
+    }
+
+    .social-input input {
+        font-size: 0.8rem;
+    }
+
+    .experience-entry,
+    .education-entry,
+    .skill-entry,
+    .project-entry {
+        padding: 0.5rem;
+    }
+
+    textarea {
+        min-height: 50px;
+    }
+}

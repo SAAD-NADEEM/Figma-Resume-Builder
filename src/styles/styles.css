@@ -425,7 +425,9 @@ main {
   border-radius: 0.6rem;
   overflow: hidden;
 }
-
+.project-details-ctn {
+  height: 100%;
+}
 .project-link-ctn {
   margin-top: 4px;
 }
@@ -676,4 +678,20 @@ main {
   .col-responsive {
     flex-direction: column;
   }
+}
+
+
+.profile-pic {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+input[type="file"] {
+  display: none;
 }

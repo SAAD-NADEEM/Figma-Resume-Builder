@@ -276,3 +276,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Populate the UI with the resume data
     populateUI(resumeData);
 });
+
+const profileUpload = document.getElementById("profile-upload") as HTMLInputElement;
+const profileImage = document.getElementById("profileImage") as HTMLImageElement;
+
+// Load profile picture from localStorage
+const loadProfilePicture = (): void => {
+    const savedImage: string | null = localStorage.getItem("profilePicture");
+    if (savedImage) {
+        profileImage.src = savedImage;
+    }
+};
+
+// Handle profile picture change
+const handleProfileChange = (event: Event): void => {
+    const target = event.target as HTMLInputElement;
+    if (!target.files || target.files.length === 0) return;
+
+    const file: File = target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+        if (e.target?.result) {
+            const imageUrl: string = e.target.result as string;
+            profileImage.src = imageUrl;
+            localStorage.setItem("profilePicture", imageUrl);
+        }
+    };
+
+    reader.readAsDataURL(file);
+};
+
+// Load saved profile picture when page loads
+window.addEventListener("DOMContentLoaded", loadProfilePicture);
+
+// Add event listener for file upload
+profileUpload.addEventListener("change", handleProfileChange);
