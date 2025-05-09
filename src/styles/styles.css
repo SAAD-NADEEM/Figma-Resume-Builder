@@ -248,13 +248,18 @@ header {
 .profile h1 {
   margin-bottom: 5px;
 }
+.profile h4, h3 {
+  margin-top: 5px;
+}
 
-.profile p {
+
+.profile .expertise {
   font-size: 1.5rem;
   font-weight: 500;
   background: var(--Gradient-primary);
   -webkit-background-clip: text;
   color: transparent;
+  margin-top: 5px;
 }
 
 /* -------------- Adresses & Socials --------------*/

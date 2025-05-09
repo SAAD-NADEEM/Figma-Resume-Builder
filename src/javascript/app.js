@@ -7,7 +7,7 @@ const predefinedResumeData = {
         email: "saadngaming@gmail.com",
         website: "https://figma-resume-builder.vercel.app/",
         phone: "03232823873",
-        address: "Karachi, Pakistan",
+        address: "DHA Phase 2 Ext, Karachi",
         socials: [
             {
                 platform: "Instagram",
@@ -44,8 +44,13 @@ const predefinedResumeData = {
             yearOfEnd: "2025",
         },
         {
-            instituteName: "GIAIC",
-            qualification: "Agentic AI, WEB3 & Metaverse",
+            instituteName: "GIAIC - 1st and 2nd Quarter ( NextJs )",
+            qualification: "Web Development ( Nextjs & Typescript ) ",
+            yearOfEnd: "2025",
+        },
+        {
+            instituteName: "GIAIC 4th Quarter - Ongoing",
+            qualification: "Agentic AI",
             yearOfEnd: "2025",
         },
     ],
@@ -57,7 +62,6 @@ const predefinedResumeData = {
         { skillName: "Javascript" },
         { skillName: "Typescript" },
         { skillName: "Python" },
-        { skillName: "React Native" },
         { skillName: "GeminiAI" },
         { skillName: "Streamlit" },
     ],
